@@ -59,6 +59,14 @@ function Header() {
   
   console.log(notas);
 
+  // Funcion para eliminar una nota por su titulo
+  function EliminarNota(title) {
+    // Se filtra para solo excluir la nota con el tituto proporcionado
+    const nuevasNotas = notas.filter(n => n.title !== title);
+    setNotas(nuevasNotas);
+    alert('Nota eliminada correctamente');
+  }
+
   return (
     <div>
       <h1>Post It Simulator!</h1>
@@ -72,6 +80,13 @@ function Header() {
       {/* Mensaje de campo vacio */}
       <div role="alert" hidden={!mensaje}>
         {mensaje}
+      </div>
+      <div>
+        {/* Recorremos cada nota de notas, a cada nota le creamos el componente main, pasandole a main los detalles de lanota,
+         una key unica que seria el indice de la nota y la funcion para eliminarnota */}
+        {notas.map((nota, indice) => (
+          <Main nota={nota} key={indice} EliminarNota={EliminarNota} />
+        ))}
       </div>
     </div>
   );
