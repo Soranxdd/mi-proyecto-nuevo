@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import Main from './main';
+import './Header.css';
 
 function Header() {
   // Crearemos referencias para los inputs
@@ -68,22 +69,24 @@ function Header() {
   }
 
   return (
-    <div>
+    <div className='container'>
+      <h1>Post It Simulator!</h1>
       <div className='contenedorForm'>
-        <h1>Post It Simulator!</h1>
         <form onSubmit={Submit}>
           <input className='inputTexto' type="text" placeholder="Titulo" ref={titleRef}/>
           <input className='inputTexto' type="text" placeholder="Descripcion" ref={descriptionRef}/>
-          <input className='checkbox' type="checkbox" ref={importantRef}/>
-          <label>Important</label>
-          <button type="submit">Agregar</button>
+          <div className="important-checkbox">
+            <input className="checkbox" type="checkbox" ref={importantRef} />
+            <label>Importante!</label>
+          </div>
+          <button className="btn btn-primary" type="submit">Agregar</button>
         </form>
       </div>
       {/* Mensaje de campo vacio */}
-      <div className='mensajeAlerta' role="alert" hidden={!mensaje}>
+      <div className='mensajeAlert' role="alert" hidden={!mensaje}>
         {mensaje}
       </div>
-      <div className='contenedorNotas'>
+      <div id="notes-container">
         {/* Recorremos cada nota de notas, a cada nota le creamos el componente main, pasandole a main los detalles de lanota,
          una key unica que seria el indice de la nota y la funcion para eliminarnota */}
         {notas.map((nota, indice) => (

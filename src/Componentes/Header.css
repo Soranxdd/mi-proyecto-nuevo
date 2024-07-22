@@ -1,0 +1,73 @@
+body {
+    background-color: #fffae5;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+  
+.container {
+    background-color: #424242;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+}
+  
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+  
+.contenedorForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+  
+.inputTexto {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+  
+.important-checkbox {
+    display: flex;
+    align-items: center;
+}
+  
+.checkbox {
+    margin-right: 5px;
+}
+  
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+.mensajeAlert {
+    color: red;
+    text-align: center;
+}
+  
+#notes-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto;
+}  
