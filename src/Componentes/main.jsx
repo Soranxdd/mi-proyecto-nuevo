@@ -10,7 +10,7 @@ function Main({nota, EliminarNota}) {
             <div className={important ? 'note important' : 'note'}>
                 <div className='flex'>
                     <h2>{title}</h2>
-                    <button onClick={() => EliminarNota(title)}>X</button>
+                    <button className='boton-eliminar' onClick={() => EliminarNota(title)}>X</button>
                 </div>
                 <p>{description}</p>
             </div>

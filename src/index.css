@@ -1,15 +1,91 @@
+/***** HEADER *****/
+
+/* Estilos de la nota */
 .note {
     padding: 1em;
     margin: 1em;
-    border: 1px solid #ccc;
-    width: min-content;
+    background-color:  #FFFFCC;
+    display: flex;
+    flex-direction: column;
     position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 150px;
 }
 
 .important {
     background-color: red;
 }
 
+body {
+    background-color: #666;
+}
+
+.contenedorForm {
+    text-align: center;
+}
+
+.contenedorForm h1 {
+    text-align: left;
+    margin-left: 4.3em;
+}
+
+.checkbox {
+    height: 2em;
+    width: 2em;
+    border-radius: 5px;
+}
+
+.inputTexto {
+    margin-right: 20px;
+    width: 30em;
+    height: 2em;
+}
+
+.contenedorForm button {
+    width: 15em;
+    height: 2em;
+    color: white;
+    background-color: black;
+    margin-left: 20px;
+}
+
+.mensajeAlerta {
+    color: white;
+    text-align: left;
+    font-size: 1.5em;
+    margin-left: 5.7em;
+}
+
+
+/***** MAIN *****/
+
 .flex {
-    display: flex
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.boton-eliminar {
+    height: min-content;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.contenedorNotas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto;
 }
